@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: myweb-deploy1
+spec: 
+    replicas: 1
+    selector:
+         matchLabels:
+             env: production
+#         matchExpressions:
+#             -   { key: env,  operator: In,  values: [ production ] }
+#             -   { key: region,  operator: In,  values: [ IN ] }
+    template:
+         metadata:
+              name: myweb-pod
+              labels:   
+                  env: production
+                  region: IN
+         spec:
+              containers:
+              -    name: myweb-con 
+                   image: httpd
