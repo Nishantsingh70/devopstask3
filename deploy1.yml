@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: myweb-deploy1
+    name: myhtmlweb-deploy1
 spec: 
     replicas: 1
     selector:
