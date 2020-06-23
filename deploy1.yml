@@ -19,4 +19,4 @@ spec:
          spec:
               containers:
               -    name: myweb-con 
-                   image: httpd
+                   image: nishant70/myweb:v1
