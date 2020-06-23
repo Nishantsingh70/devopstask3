@@ -18,5 +18,5 @@ spec:
                   region: IN
          spec:
               containers:
-              -    name: myhtmlweb-con 
-                   image: nishant70/myweb:v1
+              -   name: myhtmlweb-con 
+                  image: nishant70/myweb:v1
