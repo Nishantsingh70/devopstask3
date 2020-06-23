@@ -12,11 +12,11 @@ spec:
 #             -   { key: region,  operator: In,  values: [ IN ] }
     template:
          metadata:
-              name: myweb-pod
+              name: myhtmlweb-pod
               labels:   
                   env: production
                   region: IN
          spec:
               containers:
-              -    name: myweb-con 
+              -    name: myhtmlweb-con 
                    image: nishant70/myweb:v1
