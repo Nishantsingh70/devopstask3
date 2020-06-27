@@ -7,9 +7,6 @@ spec:
     selector:
          matchLabels:
              env: production
-#         matchExpressions:
-#             -   { key: env,  operator: In,  values: [ production ] }
-#             -   { key: region,  operator: In,  values: [ IN ] }
     template:
          metadata:
               name: myphpweb-pod
@@ -20,3 +17,5 @@ spec:
               containers:
               -   name: myphpweb-con 
                   image: nishant70/phpimage:v1
+         volumes:
+         
