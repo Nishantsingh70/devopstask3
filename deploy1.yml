@@ -7,9 +7,6 @@ spec:
     selector:
          matchLabels:
              env: production
-#         matchExpressions:
-#             -   { key: env,  operator: In,  values: [ production ] }
-#             -   { key: region,  operator: In,  values: [ IN ] }
     template:
          metadata:
               name: myhtmlweb-pod
@@ -20,3 +17,10 @@ spec:
               containers:
               -   name: myhtmlweb-con 
                   image: nishant70/phpimage:v1
+                  volumeMounts:
+                  -    mountPath: "/var/log/jenkins"
+                       name: jenkins-pvc
+              volumes:
+              -   name: jenkins-pvc
+                  persistentVolumeClaim:
+                       claimName: pv-claim-jenkins
