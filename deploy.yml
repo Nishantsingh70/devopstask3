@@ -17,5 +17,10 @@ spec:
               containers:
               -   name: myphpweb-con 
                   image: nishant70/phpimage:v1
-         volumes:
-         
+                  volumeMounts:
+                  -    mountPath: "/var/log/jenkins"
+                       name: jenkins-pvc
+              volumes:
+              -   name: jenkins-pvc
+                  persistentVolumeClaim:
+                       claimName: pv-claim-jenkins
