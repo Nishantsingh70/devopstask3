@@ -16,7 +16,7 @@ spec:
          spec:
               containers:
               -   name: myhtmlweb-con 
-                  image: nishant70/phpimage:v1
+                  image: vimal13/apache-webserver-php
                   volumeMounts:
                   -    mountPath: "/var/log/jenkins"
                        name: jenkins1-pvc
