@@ -19,8 +19,8 @@ spec:
                   image: nishant70/phpimage:v1
                   volumeMounts:
                   -    mountPath: "/var/log/jenkins"
-                       name: jenkins-pvc
+                       name: jenkins1-pvc
               volumes:
-              -   name: jenkins-pvc
+              -   name: jenkins1-pvc
                   persistentVolumeClaim:
-                       claimName: pv-claim-jenkins
+                       claimName: pv-claim-jenkins1
