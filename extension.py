@@ -1,4 +1,5 @@
 import os
+os.system("kubectl create -f /root/devops_task3/service.yml")
 for root,dirs,files in os.walk('/root/devops_task3'):
     print(files)
     for file in files:
