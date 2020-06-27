@@ -5,5 +5,5 @@ elif(os.system("$(curl -o /dev/null -s -w \"%{http_code}\" 192.168.99.108:31000/
     pass
 else:
     with open("/status" , "w") as f:
-         f.write("SEND EMAIL")
+         f.write("Code is not Correct")
 
