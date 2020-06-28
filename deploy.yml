@@ -18,7 +18,7 @@ spec:
          spec:
               containers:
               -   name: myphpweb-con 
-                  image: nishant70/phpimage:v1
+                  image: vimal13/apache-webserver-php
                   ports:
                   -    containerPort: 80
                   volumeMounts:
