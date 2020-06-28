@@ -2,21 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: myphpweb-deploy
+    labels: 
+         app: webapp
 spec: 
-    replicas: 1
     selector:
          matchLabels:
+             app: webapp
              env: production
     template:
          metadata:
               name: myphpweb-pod
               labels:   
                   env: production
-                  region: IN
+                  app: webapp
          spec:
               containers:
               -   name: myphpweb-con 
-                  image: vimal13/apache-webserver-php
+                  image: nishant70/phpimage:v1
                   ports:
                   -    containerPort: 80
                   volumeMounts:
