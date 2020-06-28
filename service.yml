@@ -4,7 +4,7 @@ metadata:
   name: myphplb
 spec:
   selector:
-    dc: IN
+    app: webapp
   type: NodePort
   ports:
   -   port: 80
