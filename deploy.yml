@@ -17,8 +17,10 @@ spec:
               containers:
               -   name: myphpweb-con 
                   image: vimal13/apache-webserver-php
+                  ports:
+                  -    containerPort: 80
                   volumeMounts:
-                  -    mountPath: "/var/log/jenkins"
+                  -    mountPath: "/usr/local/apache2/htdocs"
                        name: jenkins-pvc
               volumes:
               -   name: jenkins-pvc
