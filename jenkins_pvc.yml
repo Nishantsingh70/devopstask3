@@ -2,6 +2,8 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
     name: pv-claim-jenkins
+    labels: 
+         app: webapp
 spec:
     accessModes:
      -   ReadWriteOnce
