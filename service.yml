@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myphplb
+  name: myweblb
 spec:
   selector:
     app: webapp
