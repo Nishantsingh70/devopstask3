@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: myphpweb-deploy
+    name: myweb-deploy
     labels: 
          app: webapp
 spec: 
@@ -11,14 +11,14 @@ spec:
              env: production
     template:
          metadata:
-              name: myphpweb-pod
+              name: myweb-pod
               labels:   
                   env: production
                   app: webapp
          spec:
               containers:
-              -   name: myphpweb-con 
-                  image: nishant70/phpimage:v1
+              -   name: myweb-con 
+                  image: httpd
                   ports:
                   -    containerPort: 80
                   volumeMounts:
