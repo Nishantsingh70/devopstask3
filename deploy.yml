@@ -18,7 +18,7 @@ spec:
          spec:
               containers:
               -   name: myweb-con 
-                  image: nishant70/phpimage:v1
+                  image: nishant70/myweb:v1
                   ports:
                   -    containerPort: 80
                   volumeMounts:
